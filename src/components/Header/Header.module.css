@@ -1,0 +1,74 @@
+.Nav {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  padding: 12px 60px;
+  justify-content: space-between;
+}
+
+.Nav img {
+  height: 60px;
+}
+
+.Nav_right {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.Nav_right ul {
+  list-style: none;
+  display: flex;
+  gap: 44px;
+  font-size: 1.6rem;
+}
+
+.Nav_right ul li {
+  cursor: pointer;
+}
+
+.Nav_right .Cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.Nav_right .Cart svg {
+  font-size: 2.4rem;
+  
+}
+
+.Nav_right .Cart div {
+  background-color: var(--red);
+  text-align: center;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Nav_right img {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+/* misc */
+
+.misc {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.misc p {
+  font-size: 2rem;
+}
+
+.misc span svg {
+  font-size: 2.4rem;
+}

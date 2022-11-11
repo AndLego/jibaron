@@ -1,0 +1,42 @@
+.Product {
+  max-width: 360px;
+  height: 400px;
+  background-color: var(--white-card);
+  color: var(--black);
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.Product div {
+  align-self: flex-start;
+}
+
+.Product img {
+  width: 92%;
+  height: 64%;
+  object-fit: cover;
+}
+
+.Product h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.Product h3 {
+  margin: 4px 0;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.Product span {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
