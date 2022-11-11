@@ -34,7 +34,6 @@
 
 .Nav_right .Cart svg {
   font-size: 2.4rem;
-  
 }
 
 .Nav_right .Cart div {
@@ -57,18 +56,8 @@
   cursor: pointer;
 }
 
-/* misc */
+/* Avatar */
 
-.misc {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.misc p {
-  font-size: 2rem;
-}
-
-.misc span svg {
-  font-size: 2.4rem;
+.Avatar {
+  position: relative;
 }

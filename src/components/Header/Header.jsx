@@ -1,13 +1,28 @@
 import React from "react";
 import styles from "./Header.module.css";
 import { MdShoppingBasket } from "react-icons/md";
+import { motion } from "framer-motion";
+
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { app } from "../../../firebase.config.js";
 
 import Avatar from "../../assets/images/avatar.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const firebaseAuth = getAuth(app);
+  const provider = new GoogleAuthProvider();
+
+  const login = async () => {
+    const res = await signInWithPopup(firebaseAuth, provider);
+    console.log(res);
+  };
+
   return (
     <nav className={styles.Nav}>
-      <img src="https://i.postimg.cc/yx8Qrhg4/Jibaro.png" alt="logo" />
+      <Link to={"/"}>
+        <img src="https://i.postimg.cc/yx8Qrhg4/Jibaro.png" alt="logo" />
+      </Link>
 
       <div className={styles.Nav_right}>
         <ul>
@@ -24,16 +39,16 @@ const Header = () => {
           </div>
         </div>
 
-        <img src={Avatar} alt="" />
+        <div className={styles.Avatar}>
+          {/* whiletap adds a small animation on click */}
+          <motion.img
+            onClick={login}
+            whileTap={{ scale: 0.6 }}
+            src={Avatar}
+            alt="avatar"
+          />
+        </div>
       </div>
-
-      {/* <div className={styles.misc}>
-        <p>Sign In</p>
-
-        <span>
-          <RiShoppingCartLine />
-        </span>
-      </div> */}
     </nav>
   );
 };
