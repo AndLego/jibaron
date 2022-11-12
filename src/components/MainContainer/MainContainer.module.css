@@ -1,0 +1,15 @@
+.Main {
+  background-image: linear-gradient(
+      to bottom,
+      rgb(246 245 252 / 0%),
+      rgba(35, 34, 39, 1)
+    ),
+    url("https://hips.hearstapps.com/elledecor/assets/16/28/1468508286-ce-la-vi-restaurant-indoor.jpg");
+  /* url("https://media.cntraveler.com/photos/5a930fcaa876ae5cfa61c86b/master/pass/Il-Ristorante-Luca-Fantin_2018_Il-Ristorante-Luca-Fantin_night.jpg"); */
+  width: 100%;
+  height: 628px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* padding: 240px 20px 0; */
+}

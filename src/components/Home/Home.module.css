@@ -1,20 +1,4 @@
 .Home {
-  background-image: linear-gradient(
-      to bottom,
-      rgb(246 245 252 / 0%),
-      rgba(35, 34, 39, 1)
-    ),
-    url("https://hips.hearstapps.com/elledecor/assets/16/28/1468508286-ce-la-vi-restaurant-indoor.jpg");
-  /* url("https://media.cntraveler.com/photos/5a930fcaa876ae5cfa61c86b/master/pass/Il-Ristorante-Luca-Fantin_2018_Il-Ristorante-Luca-Fantin_night.jpg"); */
-  width: 100%;
-  height: 628px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* padding: 240px 20px 0; */
-}
-
-.content {
   display: grid;
   grid-auto-rows: auto;
   grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
@@ -27,25 +11,27 @@
   justify-content: space-between;
   gap: 4px;
   width: 140px;
+  height: 36px;
   padding: 4px 8px 4px 14px;
   font-size: 1.4rem;
   font-weight: 800;
   border-radius: 20px;
 }
 
-.content section {
+.Home section {
   padding: 28px 20px 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
   align-content: center;
+  width: 100%;
 }
 
-.content section div p {
+.Home section div p {
   color: var(--black);
 }
 
-.content section div figure {
+.Left div figure {
   background-color: var(--white-card);
   border-radius: 50%;
   width: 2.8rem;
@@ -56,30 +42,30 @@
   box-shadow: -2px 3px 6px -2px var(--pure-black);
 }
 
-.content section div figure img {
+.Left div figure img {
   width: 80%;
 }
 
-.content section > p {
+.Left > p {
   font-size: 4rem;
   font-weight: 800;
   letter-spacing: 2px;
   color: var(--logo);
 }
 
-.content span {
+.Left span {
   color: var(--yellow);
   font-size: 4.8rem;
 }
 
-.content section > p:last-of-type {
+.Left > p:last-of-type {
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--white-card);
   text-align: center;
 }
 
-.content button {
+.Left button {
   background-color: var(--yellow);
   width: 80%;
   margin: auto;
@@ -93,41 +79,150 @@
   cursor: pointer;
 }
 
-.content button:hover {
+.Left button:hover {
   box-shadow: 0px 4px 6px 0px var(--black-hover);
 }
 
+/* right side */
+
 .etc {
-  background-color: aqua;
+  position: relative;
+}
+
+.etc > img {
+  position: initial;
+  width: 308px;
+  height: 400px;
+  margin: auto;
+}
+
+.etc_menu {
+  position: absolute;
+  top: 76px;
+  right: 212px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 100px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.etc_menu > div {
+  height: 170px;
+  width: 190px;
+  background: rgb(35 34 39 / 40%);
+  box-shadow: 0 8px 32px 0 rgb(0 0 0 / 47%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.etc_menu > div img {
+  height: 140px;
+  margin-top: -60px;
+}
+
+.etc_menu > div p:nth-of-type(1) {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--white-card);
+  letter-spacing: 1px;
+}
+
+.etc_menu > div p:nth-of-type(2) {
+  color: var(--logo);
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+.etc_menu > div p:nth-of-type(3) {
+  color: var(--white-card);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+.etc_menu > div span {
+  color: var(--yellow);
 }
 
 @media screen and (min-width: 820px) {
-  .content section > p {
+  .Home section {
+    padding: 40px 20px 0 68px;
+  }
+
+  .Left > p {
     font-size: 5rem;
   }
 
-  .content span {
+  .Left span {
     font-size: 5.8rem;
   }
 
-  .content section > p:last-of-type {
+  .Left > p:last-of-type {
     text-align: left;
     width: 80%;
   }
 
-  .content button {
+  .Left button {
     width: fit-content;
     padding: 8px 16px;
     margin: initial;
   }
+
+  .etc > img {
+    position: absolute;
+    top: 36px;
+    right: 58px;
+    height: 600px;
+    width: 400px;
+  }
 }
 
-/* @media screen and (min-width: 820px) {
-
-
-  
-
-  .content button {
-    width: auto;
+@media screen and (max-width: 1225px) {
+  .etc_menu {
+    width: 99%;
+    right: 52px;
   }
-} */
+
+  .etc > img {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .Home section {
+    width: 90%;
+  }
+
+  .etc_menu {
+    width: initial;
+    right: initial;
+    justify-content: center;
+    row-gap: 68px;
+  }
+
+  .etc_menu div {
+    width: 154px;
+  }
+  .etc_menu > div img {
+    height: 112px;
+  }
+  .etc_menu > div p:nth-of-type(1) {
+    font-size: 1.2rem;
+  }
+
+  .etc_menu > div p:nth-of-type(2) {
+    font-size: 1rem;
+  }
+
+  .etc > img {
+    right: 0;
+    max-width: 300px;
+    width: 360px;
+  }
+}
