@@ -9,7 +9,7 @@ import { CreateContainer } from "./components/CreateContainer/CreateContainer";
 function App() {
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <BrowserRouter>
           <Header key="header" />
           <Routes>

@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-// import { AppProvider } from "./context/AppContext";
+import { reducer } from "./context/reducer";
+import { initialState } from "./context/initialState";
+import { StateProvider } from "./context/StateProvider";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <AppProvider>
-  <App />
-  // </AppProvider>
+  <StateProvider initialState={initialState} reducer={reducer}>
+    <App />
+  </StateProvider>
 );

@@ -1,7 +1,10 @@
 :root {
   --white: #fefefe;
   --white-card: #f3f5f7;
+  --pure-black: #000000;
   --black: #232227;
+  --black-menu: #323138;
+  --black-hover: #423d54;
   --red: #fb185a;
   --blue: #6704df;
   --yellow: #ffdf00;

@@ -1,12 +1,29 @@
-import React from 'react';
+/**
+ * The reducer function takes in the current state and an action, and returns the new state.
+ * @returns {
+ *   user: {
+ *     name: "John",
+ *     age: 30,
+ *   },
+ * };
+ */
+export const actionType = {
+  SET_USER: "SET_USER",
+};
 
-const reducer = () => {
-    const [cart, setCart] = React.useState([])
-    const [logged, setLogged] = React.useState(false)
+const reducer = (state, action) => {
+  console.log(action);
 
-    return (
-        <></>
-    );
-}
+  switch (action.type) {
+    case actionType.SET_USER:
+      return {
+        ...state,
+        user: action.user,
+      };
 
-export {reducer};
+    default:
+      return state;
+  }
+};
+
+export { reducer };

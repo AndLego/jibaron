@@ -27,16 +27,16 @@
   cursor: pointer;
 }
 
-.Nav_right .Cart {
+.Cart {
   position: relative;
   cursor: pointer;
 }
 
-.Nav_right .Cart svg {
+.Cart svg {
   font-size: 2.4rem;
 }
 
-.Nav_right .Cart div {
+.Cart div {
   background-color: var(--red);
   text-align: center;
   height: 14px;
@@ -54,10 +54,63 @@
   height: 40px;
   width: 40px;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 /* Avatar */
 
 .Avatar {
   position: relative;
+}
+
+.Avatar div {
+  position: absolute;
+  width: 160px;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black-menu);
+  margin-top: 4px;
+  left: -120px;
+  border-radius: 4px;
+  box-shadow: 6px 6px 6px 0px var(--pure-black);
+}
+
+.Avatar div p {
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.Avatar .out {
+  align-self: center;
+  background-color: var(--black-hover);
+  margin: 6px 6px;
+  padding: 8px 28px;
+  border-radius: 4px;
+  box-shadow: 2px 3px 6px -2px var(--pure-black);
+}
+
+.Avatar div p:hover {
+  background-color: var(--black-hover);
+  border-radius: inherit;
+}
+
+.Avatar a,
+.Avatar a:hover,
+.Avatar a:active,
+.Avatar a:visited,
+.Avatar a:focus {
+  text-decoration: none;
+  color: var(--white);
+  border-radius: inherit;
+}
+
+@media screen and (max-width: 600px) {
+  .Nav {
+    padding: 12px 28px;
+  }
 }
