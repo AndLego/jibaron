@@ -5,7 +5,6 @@ import { AnimatePresence } from "framer-motion";
 import { Home } from "./components/Home/Home";
 import { Header } from "./components/Header/Header";
 import { CreateContainer } from "./components/CreateContainer/CreateContainer";
-import { MainContainer } from "./components/MainContainer/MainContainer";
 
 function App() {
   return (
@@ -13,12 +12,12 @@ function App() {
       <AnimatePresence mode="wait">
         <BrowserRouter>
           <Header key="header" />
-          <MainContainer>
+          <div className="Main">
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/createItem" element={<CreateContainer />} />
             </Routes>
-          </MainContainer>
+          </div>
         </BrowserRouter>
       </AnimatePresence>
     </>

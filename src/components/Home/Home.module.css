@@ -1,7 +1,7 @@
 .Home {
   display: grid;
   grid-auto-rows: auto;
-  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
 }
 
 .delivery {
@@ -87,6 +87,7 @@
 
 .etc {
   position: relative;
+  align-items: center;
 }
 
 .etc > img {
@@ -114,7 +115,7 @@
   background: rgb(35 34 39 / 40%);
   box-shadow: 0 8px 32px 0 rgb(0 0 0 / 47%);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -195,10 +196,6 @@
 }
 
 @media screen and (max-width: 820px) {
-  .Home section {
-    width: 90%;
-  }
-
   .etc_menu {
     width: initial;
     right: initial;

@@ -1,0 +1,73 @@
+.Create {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.Create form {
+  width: 90%;
+  border: 1px solid var(--logo);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgb(35 34 39 / 40%);
+  box-shadow: 0 8px 32px 0 rgb(0 0 0 / 47%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8x);
+}
+
+.status {
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.danger {
+  background-color: var(--red);
+}
+
+.cool {
+  background-color: var(--green);
+}
+
+.title {
+  width: 100%;
+  border-bottom: 1px solid var(--logo);
+  display: flex;
+  padding: 8px 0;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.title svg {
+  color: var(--logo);
+  font-size: 2rem;
+}
+
+.title input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.title input::placeholder {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: var(--logo);
+}
+
+.title input:focus,  .title input:valid{
+  color: var(--logo);
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 820px) {
+  .Create div {
+    width: 75%;
+  }
+}

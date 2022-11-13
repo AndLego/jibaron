@@ -65,7 +65,7 @@ const Header = () => {
       <div className={styles.Nav_right}>
         {!size && (
           <>
-            <Menu size={size} />
+            <Menu size={size} setIsMenu={setIsMenu} />
             <Cart styles={styles} MdShoppingBasket={MdShoppingBasket} />
           </>
         )}
@@ -87,12 +87,12 @@ const Header = () => {
             >
               {user && user.email === "galeon.gb@gmail.com" && (
                 <Link to={"/createItem"}>
-                  <p>
+                  <p onClick={() => setIsMenu(false)}>
                     New Item <MdAdd />
                   </p>
                 </Link>
               )}
-              {size && <Menu size={size} />}
+              {size && <Menu size={size} setIsMenu={setIsMenu} />}
               <p onClick={logout} className={size ? styles.out : undefined}>
                 Logout <MdLogout />
               </p>
