@@ -13,8 +13,11 @@
   padding: 12px;
   background: rgb(35 34 39 / 40%);
   box-shadow: 0 8px 32px 0 rgb(0 0 0 / 47%);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8x);
+  /* backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8x); */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .status {
@@ -61,13 +64,137 @@
   color: var(--logo);
 }
 
-.title input:focus,  .title input:valid{
+.title input:focus,
+.title input:valid {
   color: var(--logo);
   font-size: 1.6rem;
 }
 
-@media screen and (max-width: 820px) {
-  .Create div {
-    width: 75%;
+.category select {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background: var(--logo);
+  outline: none;
+}
+
+.category select option {
+  font-size: 1.6rem;
+}
+
+.upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--logo);
+  width: 100%;
+  height: 225px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.upload label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.upload label > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.upload label > div svg {
+  color: var(--white-card);
+  font-size: 3.6rem;
+}
+
+.upload label > div p {
+  color: var(--white-card);
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.upload label:hover svg,
+.upload label:hover p {
+  color: var(--logo);
+}
+
+.upload label > input {
+  width: 0;
+  height: 0;
+}
+
+.uploaded {
+  position: relative;
+  height: 100%;
+}
+
+.uploaded img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uploaded button {
+  position: absolute;
+  padding: 8px;
+  bottom: 4px;
+  right: 0;
+  background-color: var(--red);
+  color: var(--white-card);
+  cursor: pointer;
+  outline: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 0;
+}
+.uploaded button:hover {
+  background-color: var(--white-card);
+  color: var(--red);
+}
+
+.caloriesAndPrice {
+  display: flex;
+  gap: 12px;
+}
+
+form > button {
+  background: var(--green);
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--black);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form > button:hover {
+  box-shadow: 0px 4px 6px 0px var(--black-hover);
+}
+
+@media screen and (min-width: 820px) {
+  .Create {
+    max-width: 740px;
+    margin: auto;
+  }
+  .upload {
+    height: 380px;
+  }
+
+  form > button {
+    width: 160px;
+    align-self: self-end;
   }
 }
