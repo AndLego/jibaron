@@ -19,15 +19,14 @@ import {
 import { categories } from "../../utils/data";
 import { Loader } from "../Loader/Loader";
 import { saveItem } from "../../utils/firebaseFunctions";
+import { useStateValue } from "../../context/StateProvider";
+import { getAllFoodItems } from "../../utils/firebaseFunctions";
+import { actionType } from "../../context/reducer";
 
 const CreateContainer = () => {
-  // const [title, setTitle] = React.useState("");
   const title = React.useRef("");
-  // const [category, setCategory] = React.useState(null);
   const category = React.useRef(null);
-  // const [calories, setCalories] = React.useState("");
   const calories = React.useRef("");
-  // const [price, setPrice] = React.useState("");
   const price = React.useRef("");
   const [imageAsset, setImageAsset] = React.useState(null);
 
@@ -35,6 +34,7 @@ const CreateContainer = () => {
   const [alertStatus, setAlertStatus] = React.useState("danger");
   const [msg, setMsg] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [{ foodItems }, dispatch] = useStateValue();
 
   /**
    * It uploads an image to firebase storage and returns the download url of the image.
@@ -95,6 +95,20 @@ const CreateContainer = () => {
     });
   };
 
+  /**
+   * It takes in the event object, prevents the default action, sets the loading state to true, and then
+   * checks if the required fields are empty. If they are, it sets the fields state to true, sets the
+   * message state to "Required fields can't be empty", sets the alert status to "danger", and then sets
+   * the fields state to false and the loading state to false after 4 seconds.
+   *
+   * If the required fields are not empty, it creates a data object, saves the item, sets the loading
+   * state to false, sets the fields state to true, sets the message state to "Data uploaded
+   * successfully 😊", sets the alert status to "success", clears the data, and then sets the fields
+   * state to false after 4 seconds.
+   *
+   * If there is an error, it sets the fields state to true, sets the message state to "Error while
+   * uploading :  Try Again 🙏🏻", sets the alert status to
+   */
   const saveDetails = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -137,11 +151,24 @@ const CreateContainer = () => {
         setIsLoading(false);
       }, 4000);
     }
+    fetchData();
   };
 
+  /**
+   * When the user clicks the clear button, clear the imageAsset state and reset the form.
+   */
   const clearData = (e) => {
     setImageAsset(null);
     e.target.reset();
+  };
+
+  const fetchData = async () => {
+    await getAllFoodItems().then((data) => {
+      dispatch({
+        type: actionType.SET_FOOD_ITEMS,
+        foodItems: data,
+      });
+    });
   };
 
   return (
