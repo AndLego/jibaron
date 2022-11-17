@@ -10,7 +10,7 @@ import { app } from "../../../firebase.config.js";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../context/StateProvider";
 import { actionType } from "../../context/reducer";
-import { Menu } from "./Menu/Menu";
+import { Nav } from "./Nav/Nav";
 import { useWidth } from "../../hooks/useWidth";
 import { Cart } from "./Cart/Cart";
 
@@ -65,12 +65,12 @@ const Header = () => {
       <div className={styles.Nav_right}>
         {!size && (
           <>
-            <Menu size={size} setIsMenu={setIsMenu} />
+            <Nav size={size} setIsMenu={setIsMenu} />
             <Cart styles={styles} MdShoppingBasket={MdShoppingBasket} />
           </>
         )}
 
-        {/* avatar and menu */}
+        {/* avatar and Nav */}
         <div className={styles.Avatar}>
           {/* whiletap adds a small animation on click */}
           <motion.img
@@ -92,7 +92,7 @@ const Header = () => {
                   </p>
                 </Link>
               )}
-              {size && <Menu size={size} setIsMenu={setIsMenu} />}
+              {size && <Nav size={size} setIsMenu={setIsMenu} />}
               <p onClick={logout} className={size ? styles.out : undefined}>
                 Logout <MdLogout />
               </p>

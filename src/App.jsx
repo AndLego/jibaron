@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import { Home } from "./components/Home/Home";
+import { MainContainer } from "./components/MainContainer/MainContainer";
 import { Header } from "./components/Header/Header";
 import { CreateContainer } from "./components/CreateContainer/CreateContainer";
 import { useStateValue } from "./context/StateProvider";
@@ -32,7 +32,7 @@ function App() {
           <Header key="header" />
           <div className="Main">
             <Routes>
-              <Route exact path="/" element={<Home />} />
+              <Route exact path="/" element={<MainContainer />} />
               <Route exact path="/createItem" element={<CreateContainer />} />
             </Routes>
           </div>

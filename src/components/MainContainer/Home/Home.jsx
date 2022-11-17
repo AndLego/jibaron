@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Home.module.css";
-import Delivery from "../../assets/images/delivery.png";
-import heroBg from "../../assets/images/heroBg.png";
-import { heroData } from "../../utils/data.js";
+import Delivery from "../../../assets/images/delivery.png";
+import heroBg from "../../../assets/images/heroBg.png";
+import { heroData } from "../../../utils/data.js";
 
 const Home = () => {
   return (

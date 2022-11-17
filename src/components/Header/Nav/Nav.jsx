@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Menu = ({ size, setIsMenu }) => {
+const Nav = ({ size, setIsMenu }) => {
   const desktop = (
     <motion.ul
       initial={{ opacity: 0, x: 200 }}
@@ -27,4 +27,4 @@ const Menu = ({ size, setIsMenu }) => {
   return <>{!size ? desktop : mobile}</>;
 };
 
-export { Menu };
+export { Nav };

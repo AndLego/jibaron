@@ -38,5 +38,18 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* padding: 240px 20px 0; */
 }
+
+@media (min-width: 800px) {
+  .Main {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .Main {
+    padding: 0 60px 0 68px;
+  }
+}
+
+

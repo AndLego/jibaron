@@ -19,8 +19,8 @@ import {
 import { categories } from "../../utils/data";
 import { Loader } from "../Loader/Loader";
 import { saveItem } from "../../utils/firebaseFunctions";
-import { useStateValue } from "../../context/StateProvider";
 import { getAllFoodItems } from "../../utils/firebaseFunctions";
+import { useStateValue } from "../../context/StateProvider";
 import { actionType } from "../../context/reducer";
 
 const CreateContainer = () => {
