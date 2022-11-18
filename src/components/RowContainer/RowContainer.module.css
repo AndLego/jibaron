@@ -49,7 +49,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 20px;
+  gap: 40px;
 }
 
 .card > div div:first-of-type {
@@ -90,4 +90,15 @@
 
 .card > div p:nth-child(3) svg {
   color: var(--red);
+}
+
+.NotAvailable,
+.NotAvailable img {
+  width: 100%;
+}
+
+.NotAvailable p {
+  text-align: center;
+  font-size: 2rem;
+  padding: 8px;
 }

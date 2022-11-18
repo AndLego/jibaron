@@ -26,7 +26,7 @@ const Header = () => {
   const provider = new GoogleAuthProvider();
 
   //Context variables
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user, cartShow }, dispatch] = useStateValue();
 
   const login = async () => {
     if (!user) {
@@ -53,9 +53,22 @@ const Header = () => {
     });
   };
 
+  const showCart = () => {
+    dispatch({
+      type: actionType.SET_CART_SHOW,
+      cartShow: !cartShow,
+    });
+  };
+
   return (
     <nav className={styles.Nav}>
-      {size && <Cart styles={styles} MdShoppingBasket={MdShoppingBasket} />}
+      {size && (
+        <Cart
+          styles={styles}
+          MdShoppingBasket={MdShoppingBasket}
+          showCart={showCart}
+        />
+      )}
 
       <Link to={"/"}>
         <img src="https://i.postimg.cc/yx8Qrhg4/Jibaro.png" alt="logo" />
@@ -66,7 +79,11 @@ const Header = () => {
         {!size && (
           <>
             <Nav size={size} setIsMenu={setIsMenu} />
-            <Cart styles={styles} MdShoppingBasket={MdShoppingBasket} />
+            <Cart
+              styles={styles}
+              MdShoppingBasket={MdShoppingBasket}
+              showCart={showCart}
+            />
           </>
         )}
 

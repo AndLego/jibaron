@@ -20,7 +20,6 @@
   font-weight: 600;
   color: var(--white-card);
   letter-spacing: 1px;
-  transition: all 0.3s ease-in-out;
 }
 
 .Title p::before {
@@ -40,60 +39,12 @@
   width: 100%;
   padding: 32px 0 28px;
   align-items: center;
-  justify-content: center;
+  overflow-x: auto;
 }
-
-/* .Card{
-  background-color: var(--logo);
-  width: 88px;
-  height: 96px;
-  cursor: pointer;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px
-}
-
-.Card:hover{
-  background-color: var(--black-hover);
-}
-
-.Card > div {
-  background-color: var(--black-menu);
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.Card:hover > div{
-background-color: var(--logo);
-}
-
-.Card > div svg {
-  font-size: 1.6rem;
-  color: var(--white-card);
-}
-
-.Card:hover > div svg{
-color: var(--pure-black);
-}
-
-.Card > p {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.Card:hover > p{
-color: var(--logo);
-} */
 
 .Card {
   background-color: var(--black-menu);
+  min-width: 80px;
   width: 88px;
   height: 96px;
   cursor: pointer;
@@ -106,7 +57,8 @@ color: var(--logo);
   box-shadow: 0px 6px 12px -4px var(--logo);
 }
 
-.Card:hover {
+.Card:hover,
+.Card_active {
   background-color: var(--logo);
 }
 
@@ -120,7 +72,8 @@ color: var(--logo);
   justify-content: center;
 }
 
-.Card:hover > div {
+.Card:hover > div,
+.Card_active > div {
   background-color: var(--black-menu);
 }
 
@@ -129,7 +82,8 @@ color: var(--logo);
   color: var(--pure-black);
 }
 
-.Card:hover > div svg {
+.Card:hover > div svg,
+.Card_active > div svg {
   color: var(--white-card);
 }
 
@@ -139,6 +93,13 @@ color: var(--logo);
   color: var(--logo);
 }
 
-.Card:hover > p {
+.Card:hover > p,
+.Card_active > p {
   color: var(--pure-black);
+}
+
+@media screen and (min-width: 820px) {
+  .Options {
+    justify-content: center;
+  }
 }

@@ -5,6 +5,9 @@
   --black: #232227;
   --black-menu: #323138;
   --black-hover: #423d54;
+  --black-cart: #212529;
+  --black-cart2: #343a40;
+  --black-cart3: #353739;
   --red: #fb185a;
   --blue: #6704df;
   --yellow: #ffdf00;
@@ -38,6 +41,7 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: 90px;
 }
 
 @media (min-width: 800px) {
@@ -51,5 +55,3 @@ html {
     padding: 0 60px 0 68px;
   }
 }
-
-

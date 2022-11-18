@@ -4,10 +4,8 @@ import { motion } from "framer-motion";
 
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { RowContainer } from "../../RowContainer/RowContainer";
-import { useStateValue } from "../../../context/StateProvider";
 
-const Fruits = () => {
-  const [{ foodItems }, dispatch] = useStateValue();
+const Fruits = ({foodItems}) => {
   const rowContainer = React.useRef();
 
   const scroll = (scrollOffSet) => {
