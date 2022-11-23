@@ -1,7 +1,3 @@
-import I1 from "../assets/images/I1.png";
-import F1 from "../assets/images/F1.png";
-import C3 from "../assets/images/C3.png";
-import FI1 from "../assets/images/FI1.png";
 
 export const heroData = [
   {
@@ -9,28 +5,28 @@ export const heroData = [
     name: "Icecream",
     description: "Chocolate & Vainilla",
     price: "3.25",
-    imageSrc: I1,
+    imageSrc: "https://i.postimg.cc/pTfq40nn/i1.png",
   },
   {
     id: 2,
     name: "Strawberries",
     description: "Fresh Strawberries",
     price: "4.25",
-    imageSrc: F1,
+    imageSrc: "https://i.postimg.cc/C1Tcvydg/f1.png",
   },
   {
     id: 3,
     name: "Chicken Marinaded",
     description: "Mixed Chicken Plate",
     price: "8.25",
-    imageSrc: C3,
+    imageSrc: "https://i.postimg.cc/JhyF6cqb/c3.png",
   },
   {
     id: 4,
     name: "Mixed Oysters",
     description: "Mixed Oysters Plate",
     price: "7.25",
-    imageSrc: FI1,
+    imageSrc: "https://i.postimg.cc/kGNzNJyz/fi1.png",
   },
 ];
 

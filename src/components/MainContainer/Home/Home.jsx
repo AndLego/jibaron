@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./Home.module.css";
-import Delivery from "../../../assets/images/delivery.png";
-import heroBg from "../../../assets/images/heroBg.png";
 import { heroData } from "../../../utils/data.js";
 
 const Home = () => {
@@ -11,7 +9,7 @@ const Home = () => {
         <div className={styles.delivery}>
           <p>Bike Delivery</p>
           <figure>
-            <img src={Delivery} alt="delivery" />
+            <img src="https://i.postimg.cc/W4h45KCX/delivery.png" alt="delivery" />
           </figure>
         </div>
 
@@ -30,7 +28,7 @@ const Home = () => {
       </section>
 
       <section className={styles.etc}>
-        <img src={heroBg} alt="bg" />
+        <img src="https://i.postimg.cc/WpS7Zqmj/heroBg.png" alt="bg" />
 
         <div className={styles.etc_menu}>
           {heroData && heroData.map((dish) => (

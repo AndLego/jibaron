@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Header.module.css";
-import Avatar from "../../assets/images/avatar.png";
 import { MdShoppingBasket, MdAdd, MdLogout } from "react-icons/md";
 import { motion } from "framer-motion";
 
@@ -96,7 +95,7 @@ const Header = () => {
           <motion.img
             onClick={login}
             whileTap={{ scale: 0.6 }}
-            src={user ? user.photoURL : Avatar}
+            src={user ? user.photoURL : "https://i.postimg.cc/y6JFDpNh/avatar.png"}
             alt="avatar"
           />
           {isMenu && (

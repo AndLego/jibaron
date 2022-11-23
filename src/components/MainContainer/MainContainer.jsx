@@ -1,5 +1,4 @@
 import React from "react";
-import { CartContainer } from "./CartContainer/CartContainer";
 import { Fruits } from "./Fruits/Fruits";
 import { Home } from "./Home/Home";
 import { Menu } from "./Menu/Menu";
