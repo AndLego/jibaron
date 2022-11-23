@@ -5,13 +5,13 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBheBcwZZHuc3XpbhycFnoj4xiALE79Wl0",
-  authDomain: "jibaro-restaurant.firebaseapp.com",
-  databaseURL: "https://jibaro-restaurant-default-rtdb.firebaseio.com",
-  projectId: "jibaro-restaurant",
-  storageBucket: "jibaro-restaurant.appspot.com",
-  messagingSenderId: "908093916103",
-  appId: "1:908093916103:web:2ffbcb456e8c31dd3b0fe2",
+  apiKey: import.meta.env.VITE_REACT_APP_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_REACT_APP_FIREBASE_DB_URL,
+  projectId: import.meta.env.VITE_REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_REACT_APP_FIREBASE_MESSAGING_ID,
+  appId: import.meta.env.VITE_REACT_APP_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
