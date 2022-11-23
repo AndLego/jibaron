@@ -11,10 +11,19 @@ export const actionType = {
   SET_USER: "SET_USER",
   SET_FOOD_ITEMS: "SET_FOOD_ITEMS",
   SET_CART_SHOW: "SET_CART_SHOW",
+  SET_CART_ITEMS: "SET_CART_ITEMS",
 };
 
+// export const addToCart = (payload) => {
+//   return {
+//     type: SET_CART_ITEMS,
+//     payload,
+//   };
+// };
+
 const reducer = (state, action) => {
-  console.log(action);
+  console.log("state", state);
+  console.log("action", state);
 
   switch (action.type) {
     case actionType.SET_USER:
@@ -33,6 +42,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         cartShow: action.cartShow,
+      };
+
+    case actionType.SET_CART_ITEMS:
+      return {
+        ...state,
+        cartItems: action.cartItems,
       };
 
     default:

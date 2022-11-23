@@ -11,7 +11,7 @@
   z-index: 10;
 }
 
-.Nav img {
+.Nav a img {
   height: 60px;
 }
 
@@ -28,8 +28,13 @@
   font-size: 1.6rem;
 }
 
+.Nav_right ul a {
+  text-decoration: none;
+}
+
 .Nav_right ul li {
   cursor: pointer;
+  color: var(--white-card);
 }
 
 .Cart {

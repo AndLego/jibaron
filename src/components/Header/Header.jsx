@@ -13,6 +13,7 @@ import { actionType } from "../../context/reducer";
 import { Nav } from "./Nav/Nav";
 import { useWidth } from "../../hooks/useWidth";
 import { Cart } from "./Cart/Cart";
+import { CartContainer } from "../MainContainer/CartContainer/CartContainer";
 
 const Header = () => {
   const [isMenu, setIsMenu] = React.useState(false);
@@ -26,7 +27,7 @@ const Header = () => {
   const provider = new GoogleAuthProvider();
 
   //Context variables
-  const [{ user, cartShow }, dispatch] = useStateValue();
+  const [{ user, cartShow, cartItems }, dispatch] = useStateValue();
 
   const login = async () => {
     if (!user) {
@@ -67,6 +68,7 @@ const Header = () => {
           styles={styles}
           MdShoppingBasket={MdShoppingBasket}
           showCart={showCart}
+          cartItems={cartItems}
         />
       )}
 
@@ -83,6 +85,7 @@ const Header = () => {
               styles={styles}
               MdShoppingBasket={MdShoppingBasket}
               showCart={showCart}
+              cartItems={cartItems}
             />
           </>
         )}
@@ -117,6 +120,13 @@ const Header = () => {
           )}
         </div>
       </div>
+      {cartShow && (
+        <CartContainer
+          cartItems={cartItems}
+          user={user}
+          dispatch={dispatch}
+        />
+      )}
     </nav>
   );
 };

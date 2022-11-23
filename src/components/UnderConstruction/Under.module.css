@@ -1,0 +1,26 @@
+.Build {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 28px;
+  justify-content: center;
+}
+
+.Build h1 {
+  color: var(--white-card);
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.Build img {
+  max-width: 328px;
+  width: 80%;
+}
+
+.Build p {
+  color: var(--white-card);
+  font-size: 2rem;
+  letter-spacing: 2px;
+}

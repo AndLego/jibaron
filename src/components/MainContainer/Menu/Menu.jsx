@@ -14,9 +14,9 @@ const Menu = () => {
   React.useEffect(() => {}, [filter]);
 
   return (
-    <section className={styles.Menu}>
+    <section className={styles.Menu} id="Menu">
       <div className={styles.Title}>
-        <p>Our Best Menu</p>
+        <p>Our Menu</p>
       </div>
 
       <div className={styles.Options}>
